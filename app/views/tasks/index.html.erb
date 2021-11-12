@@ -1,0 +1,8 @@
+<div class="container my-5">
+  <h1>My tasks</h1>
+    <% @tasks.each do |task| %>
+        <%= check_box("display", task.id) %> <%= link_to task.title, task_path(task) %> <%= button_to raw("<i class=\"fas fa-trash\"></i>"), task_path(task), method: :delete, data: { confirm: "Delete?" } %>
+    <% end %>
+  
+  <p><%= link_to "+ Add a new task", new_path %></p>
+</div>
