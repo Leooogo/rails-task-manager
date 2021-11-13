@@ -1,6 +1,11 @@
 <div class="container my-5">
-  <h1><%= @task.title %></h1>
-  <%= link_to 'Edit this task', edit_path(@task), :class => "btn btn-primary" %>
+  <div class="task-title">
+    <h1><%= @task.title %></h1>
+    <div class="btn">
+      <%= link_to 'Edit this task', edit_path(@task), :class => "btn btn-primary" %>
+    </div> 
+  </div>
+  
   <div class="detail"><%= @task.details %></div>
   <% if @task.completed? %>
   <p><%= check_box("display", @task.id) %> This task is completed</p>
