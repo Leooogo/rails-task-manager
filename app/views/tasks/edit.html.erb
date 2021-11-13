@@ -1,8 +1,10 @@
-<h1>Edit task</h1>
-<%= simple_form_for(@task) do |f| %>
-  <%= f.input :title %>
-  <%= f.input :details %>
-  <%= f.input :completed %>
-  <%= f.submit %>
-<% end %>
-<p><%= link_to "Back to list", index_path %></p>
+<div class="container my-5">
+  <h1>Edit task</h1>
+  <%= simple_form_for(@task) do |f| %>
+    <%= f.input :title %>
+    <%= f.input :details %>
+    <%= f.input :completed %>
+    <%= f.submit  :class => "btn btn-primary" %>
+  <% end %>
+  <p><%= link_to "Back to list", index_path %></p>
+</div>
