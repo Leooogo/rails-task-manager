@@ -1,6 +1,11 @@
 class TasksController < ApplicationController
+  before_action :set_task, only: [:show, :edit, :update, :destroy]
+
   def index
+    completed = params[:completed]
     @tasks = Task.all
+    @tasks = Task.where.not(completed_at: nil) if completed == 'complete'
+    @tasks = Task.where(completed_at: nil) if completed == 'incomplete'
   end
 
   def create
@@ -40,5 +45,9 @@ class TasksController < ApplicationController
 
   def task_params
     params.require(:task).permit(:title, :details, :completed)
+  end
+
+  def set_task
+    @task = Task.find(params[:id])
   end
 end

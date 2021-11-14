@@ -1,16 +1,17 @@
 <div class="container my-5">
   <div class="task-title">
     <h1><%= @task.title %></h1>
-    <div class="btn">
-      <%= link_to 'Edit this task', edit_path(@task), :class => "btn btn-primary" %>
+    <div class="btn btn-ghost">
+      <i class="fas fa-pen"></i>
+      <%= link_to 'Edit this task', edit_path(@task) %>
     </div> 
   </div>
   
   <div class="detail"><%= @task.details %></div>
   <% if @task.completed? %>
-  <p><%= check_box("display", @task.id) %> This task is completed</p>
+  <p><i class="fas fa-check-square"></i> This task is completed</p>
   <% else %>
-  <p><%= check_box("display", @task.id) %> This task is not completed yet</p>
+  <p><i class="far fa-square"></i> This task is not completed yet</p>
   <% end %>
-  <p><%= link_to "Back to list", index_path %></p>
+  <p class="back"><i class="fas fa-undo"></i> <%= link_to "Back to list", index_path %></p>
 </div>

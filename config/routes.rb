@@ -8,4 +8,6 @@ Rails.application.routes.draw do
   post "tasks", to: "tasks#create"
   patch "tasks/:id", to: "tasks#update", as: :update
   delete "tasks/:id", to: "tasks#destroy"
+
+  match "tasks/complete" => "tasks#complete", as: 'complete_task', via: :put
 end
