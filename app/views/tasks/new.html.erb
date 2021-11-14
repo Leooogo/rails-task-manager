@@ -1,9 +1,11 @@
 <div class="container my-5">
   <h1>New task</h1>
-  <%= simple_form_for(@task) do |f| %>
-    <%= f.input :title %>
-    <%= f.input :details %>
-    <%= f.submit :class => "btn btn-primary" %>
-  <% end %>
-  <p><%= link_to "Back to list", index_path %></p>
+  <div class="form">
+    <%= simple_form_for(@task) do |f| %>
+      <%= f.input :title %>
+      <%= f.input :details %>
+      <%= f.submit :class => "btn btn-primary" %>
+    <% end %>
+  </div>
+  <p class="back"><i class="fas fa-undo"></i> <%= link_to "Back to list", index_path %></p>
 </div>

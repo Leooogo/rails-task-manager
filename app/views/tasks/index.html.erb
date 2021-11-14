@@ -3,7 +3,13 @@
   <ul class="task-list">
     <% @tasks.each do |task| %>
       <li>
-        <%= check_box("display", task.id) %> <%= link_to task.title, task_path(task) %> 
+        <input type="checkbox"
+                    data-action="task#toggle"
+                    data-target="task.completed"
+                    <% if task.completed %> checked <% end %> >
+        
+        
+        <%= link_to task.title, task_path(task) %> 
         <%= link_to task_path(task), method: :delete, data: { confirm: "Delete this?" } do %>
           <i class="fas fa-trash"></i>
         <% end %>
@@ -12,5 +18,5 @@
   </ul>
     
   
-  <p><%= link_to "+ Add a new task", new_path %></p>
+  <p class="add"><%= link_to "+ Add a new task", new_path %></p>
 </div>
