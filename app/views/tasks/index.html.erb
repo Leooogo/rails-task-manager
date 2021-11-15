@@ -1,22 +1,24 @@
-<div class="container my-5">
-  <h1>My tasks</h1>
-  <ul class="task-list">
-    <% @tasks.each do |task| %>
-      <li>
-        <input type="checkbox"
-                    data-action="task#toggle"
-                    data-target="task.completed"
-                    <% if task.completed %> checked <% end %> >
-        
-        
-        <%= link_to task.title, task_path(task) %> 
-        <%= link_to task_path(task), method: :delete, data: { confirm: "Delete this?" } do %>
-          <i class="fas fa-trash"></i>
-        <% end %>
-      </li>
-    <% end %>
-  </ul>
+<body>
+  <div class="container my-5">
+    <h1>My tasks</h1>
+    <ul class="task-list">
+      <% @tasks.each do |task| %>
+        <li>
+          <input type="checkbox"
+                      data-action="task#toggle"
+                      data-target="task.completed"
+                      <% if task.completed %> checked <% end %> >
+          
+          
+          <%= link_to task.title, task_path(task) %> 
+          <%= link_to task_path(task), method: :delete, data: { confirm: "Delete this?" } do %>
+            <i class="fas fa-trash"></i>
+          <% end %>
+        </li>
+      <% end %>
+    </ul>
+      
     
-  
-  <p class="add"><%= link_to "+ Add a new task", new_path %></p>
-</div>
+    <p class="add"><%= link_to "+ Add a new task", new_path %></p>
+  </div>
+</body>

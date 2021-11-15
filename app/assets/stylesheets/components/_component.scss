@@ -1,3 +1,27 @@
+body {
+  background-color: #dfdfdf;
+  min-height: 70vh;
+  display: flex;
+  align-items: center;
+  color: #474554;
+  font-family: "Open Sans", cursive;
+  font-size: 130%;
+}
+
+.container {
+  padding: 20px;
+  width: 100%;
+  height: auto;
+  max-width: 500px;
+  min-width: 250px;
+  margin: 40px auto 0 auto;
+  background: #aca7cb;
+  border-radius: 5px;
+  // box-shadow: 3px #c1c4c9;
+}
+
+
+
 .add {
   border-top: 1px solid #4A4A4A;
   padding-top: 15px;

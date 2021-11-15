@@ -3,24 +3,30 @@
   justify-content: space-between;
 
   .btn-ghost {
-    background-color: white;
-    color: #4A4A4A;
-    border: 1px solid #4A4A4A;
+    background-color: #dfdfdf;
+    color: #474554;
+    border: 1px solid #474554;
     border-radius: 5px;
     font-weight: lighter;
     opacity: 0.6;
     transition: opacity 0.3s ease;
-    margin-bottom: 15px;
+    margin: 2px auto 15px auto;
+    padding: 5px 15px;
   }
 
   a {
-    color: #4A4A4A !important;
+    color: #474554;
     text-decoration: none;
   }
 
   .btn-ghost:hover {
     opacity: 1;
-    background-color: #bebebe;
+    background-color: #474554;
+    color: #dfdfdf;
+  }
+
+  a:hover {
+    color: #dfdfdf;
   }
 }
 
