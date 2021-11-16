@@ -12,7 +12,7 @@ body {
   padding: 20px;
   width: 100%;
   height: auto;
-  max-width: 500px;
+  max-width: 380px;
   min-width: 250px;
   margin: 40px auto 0 auto;
   background: #aca7cb;
@@ -28,12 +28,16 @@ body {
 }
 
 .back {
-  border-top: 1px solid #4A4A4A !important;
+  border-top: 1px solid #474554 !important;
   padding-top: 15px;
 
   i {
-    color: #167FFB;
+    color: #474554;
     text-decoration: none;
+  }
+
+  a {
+    color: #474554;
   }
 }
 
@@ -41,8 +45,51 @@ body {
   margin-bottom: 30px;
 }
 
+.form-control {
+  border-color: #474554;
+  border-radius: 5px;
+  color: #474554;
+  background-color: #dfdfdf;
+}
+
 .form-control.is-valid {
-  border-color: #4A4A4A;
+  border-color: #474554 !important;
   background-image: none;
   border-radius: 5px;
+  color: #474554;
+}
+
+.form-check-label {
+  color: #474554 !important;
+}
+
+input[type="checkbox"] {
+  margin-top: 10px;
+}
+
+a {
+  color: #474554;
+
+  // a:hover {
+  //   text-decoration: none;
+  // }
+}
+
+
+
+@media (max-width: 720px) {
+/* For a screen < 720px, this CSS will be read */
+.container {
+    width: 350px;
+  }
+}
+@media (max-width: 540px) {
+/* For a screen < 540px, this CSS will be read */
+  .container {
+    width: 180px;
+  }
+
+  .task-title {
+    display: inline-block;
+  }
 }
