@@ -10,13 +10,7 @@
     font-weight: lighter;
     opacity: 0.6;
     transition: opacity 0.3s ease;
-    margin: 2px auto 15px auto;
-    padding: 5px 15px;
-  }
-
-  a {
-    color: #474554;
-    text-decoration: none;
+    margin-bottom: 15px;
   }
 
   .btn-ghost:hover {
@@ -32,6 +26,27 @@
 
 .btn-primary {
   border-radius: 5px;
+  background-color: #dfdfdf;
+  border: 1px solid #474554;
+
+  .btn-primary:hover {
+    opacity: 1;
+    background-color: #474554 !important;
+  }
+
+  // a:hover {
+  //   color: #dfdfdf !important;
+  // }
 }
 
+input[type="submit" i] {
+  border: none;
+  background-color: #dfdfdf;
+  color: #474554;
+
+  input[type="submit" i]:hover {
+    background-color: #474554;
+    color: #dfdfdf !important;
+  }
+}
 

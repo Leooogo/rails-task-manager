@@ -5,7 +5,7 @@
         <%= f.input :title %>
         <%= f.input :details %>
         <%= f.input :completed %>
-        <%= f.submit  :class => "btn btn-primary" %>
+        <div class="btn btn-primary"><%= f.submit %></div>
       <% end %>
     </div>
   <p class="back"><i class="fas fa-undo"></i> <%= link_to "Back to list", index_path %></p>
