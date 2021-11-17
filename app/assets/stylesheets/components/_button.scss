@@ -11,23 +11,26 @@
     opacity: 0.6;
     transition: opacity 0.3s ease;
     margin-bottom: 15px;
+    text-decoration: none;
+    font-size: 13px;
   }
 
-  .btn-ghost:hover {
-    opacity: 1;
-    background-color: #474554;
-    color: #dfdfdf;
-  }
+  // .btn-ghost:hover {
+  //   opacity: 1;
+  //   background-color: #474554;
+  //   color: #dfdfdf;
+  // }
 
   a:hover {
-    color: #dfdfdf;
+    color: #474554;
+    text-decoration: none;
   }
 }
 
 .btn-primary {
   border-radius: 5px;
-  background-color: #dfdfdf;
-  border: 1px solid #474554;
+  background-color: #dfdfdf !important;
+  border: 1px solid #474554 !important;
 
   .btn-primary:hover {
     opacity: 1;
@@ -39,13 +42,13 @@
   // }
 }
 
-input[type="submit" i] {
+.form input[type="submit" i] {
   border: none;
-  background-color: #dfdfdf;
+  background-color: #dfdfdf !important;
   color: #474554;
 
-  input[type="submit" i]:hover {
-    background-color: #474554;
+  .form input[type="submit" i]:hover {
+    background-color: #474554 !important;
     color: #dfdfdf !important;
   }
 }
